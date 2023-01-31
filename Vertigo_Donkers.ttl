@@ -1,20 +1,4 @@
 ##############################################################################################################
-### Information
-##############################################################################################################
-
-
-<https://github.com/AlexDonkers/vertigo#> 
-        <http://purl.org/dc/terms/creator> 						"Alex Donkers" ;
-		<http://purl.org/dc/terms/contributor> 					"Bauke de Vries" ,
-																"Dujuan Yang" ;
-        <http://purl.org/dc/terms/description> 					"Vertigo houses the faculty of the Built Environment at Eindhoven University of Technology. This dataset was created by Alex Donkers to perform research on linked building data. We invite researchers to re-use this dataset."@en ;
-        <http://purl.org/dc/terms/title> 						"Vertigo"@en ;
-        rdfs:label 												"Vertigo"@en ;
-        owl:versionInfo 										1.0 .
-
-
-
-##############################################################################################################
 ### Prefixes
 ##############################################################################################################
 
@@ -35,6 +19,22 @@
 @prefix vertigo: <https://github.com/AlexDonkers/vertigo#> .
 @prefix mep: <http://pi.pauwel.be/voc/distributionelement#> .
 @prefix furn: <http://pi.pauwel.be/voc/furniture#> .
+
+
+
+##############################################################################################################
+### Information
+##############################################################################################################
+
+
+<https://github.com/AlexDonkers/vertigo#> 
+        <http://purl.org/dc/terms/creator> 						"Alex Donkers" ;
+		<http://purl.org/dc/terms/contributor> 					"Bauke de Vries" ,
+																"Dujuan Yang" ;
+        <http://purl.org/dc/terms/description> 					"Vertigo houses the faculty of the Built Environment at Eindhoven University of Technology. This dataset was created by Alex Donkers to perform research on linked building data. We invite researchers to re-use this dataset."@en ;
+        <http://purl.org/dc/terms/title> 						"Vertigo"@en ;
+        rdfs:label 												"Vertigo"@en ;
+        owl:versionInfo 										1.0 .
 
 
 

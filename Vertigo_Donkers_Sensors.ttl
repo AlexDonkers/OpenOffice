@@ -1,0 +1,326 @@
+##############################################################################################################
+### Prefixes
+##############################################################################################################
+
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix bop:   	<https://w3id.org/bop#> .	
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .		
+@prefix bpt:   	<https://w3id.org/bpt#> .							
+@prefix ifc: <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix beo: <https://pi.pauwel.be/voc/buildingelement#> .
+@prefix lbd: <https://linkebuildingdata.org/LBD#> .
+@prefix props: <http://lbd.arch.rwth-aachen.de/props#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix IFC4-PSD: <https://www.linkedbuildingdata.net/IFC4-PSD#> .
+@prefix smls: <https://w3id.org/def/smls-owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mep: <http://pi.pauwel.be/voc/distributionelement#> .
+@prefix furn: <http://pi.pauwel.be/voc/furniture#> .
+
+@prefix vertigo: <https://github.com/AlexDonkers/vertigo#> .
+
+
+##############################################################################################################
+### Information
+##############################################################################################################
+
+<https://github.com/AlexDonkers/vertigo#> 
+        <http://purl.org/dc/terms/creator> 						"Alex Donkers" ;
+		<http://purl.org/dc/terms/contributor> 					"Bauke de Vries" ,
+																"Dujuan Yang" ;
+        <http://purl.org/dc/terms/description> 					"Vertigo houses the faculty of the Built Environment at Eindhoven University of Technology. This dataset was created by Alex Donkers to perform research on linked building data. We invite researchers to re-use this dataset."@en ;
+        <http://purl.org/dc/terms/title> 						"Vertigo"@en ;
+        rdfs:label 												"Vertigo"@en ;
+        owl:versionInfo 										1.0 .
+
+
+
+##############################################################################################################
+### Hosts
+##############################################################################################################
+
+### 907
+
+vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c
+		bot:containsElement				vertigo:Room907_Drawer_01 .
+	
+vertigo:Room907_Drawer_01
+		bop:hosts						vertigo:EltekRHT10-D_02, vertigo:EltekGD47_02, vertigo:EltekLS50_02, vertigo:EltekGD47AC_02 .
+
+### 909
+
+vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3
+		bot:containsElement				vertigo:Room909_Drawer_01 .
+	
+vertigo:Room909_Drawer_01
+		bop:hosts						vertigo:EltekRHT10-D_01, vertigo:EltekGD47_01, vertigo:EltekLS50_01, vertigo:EltekGD47AC_01 .
+
+### 916
+
+vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93
+		bot:containsElement				vertigo:Room916_Drawer_01 .
+	
+vertigo:Room916_Drawer_01
+		bop:hosts						vertigo:EltekRHT10-D_03, vertigo:EltekGD47_03, vertigo:EltekLS50_03, vertigo:EltekGD47AC_03 .
+
+
+##############################################################################################################
+### Sensors
+##############################################################################################################
+
+### 907
+
+vertigo:EltekRHT10-D_02
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekRHT10-D_02" ;
+		
+		bop:observes					vertigo:Room907Temperature, vertigo:Room907RelativeHumidity ;
+		bop:isHostedBy					vertigo:Room907_Drawer_01 .
+		
+vertigo:EltekGD47_02
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47_02" ;
+		
+		bop:observes					vertigo:Room907CO2 ;
+		bop:isHostedBy					vertigo:Room907_Drawer_01 .
+		
+vertigo:EltekLS50_02
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekLS50_02" ;
+		
+		bop:observes					vertigo:Room907Illuminance ;
+		bop:isHostedBy					vertigo:Room907_Drawer_01 .
+		
+vertigo:EltekGD47AC_02
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47AC_02" ;
+		
+		bop:observes					vertigo:Room907AirQuality ;
+		bop:isHostedBy					vertigo:Room907_Drawer_01 .
+
+### 909
+
+vertigo:EltekRHT10-D_01
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekRHT10-D_01" ;
+		
+		bop:observes					vertigo:Room909Temperature, vertigo:Room909RelativeHumidity ;
+		bop:isHostedBy					vertigo:Room909_Drawer_01 .
+		
+vertigo:EltekGD47_01
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47_01" ;
+		
+		bop:observes					vertigo:Room909CO2 ;
+		bop:isHostedBy					vertigo:Room909_Drawer_01 .
+		
+vertigo:EltekLS50_01
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekLS50_01" ;
+		
+		bop:observes					vertigo:Room909Illuminance ;
+		bop:isHostedBy					vertigo:Room909_Drawer_01 .
+		
+vertigo:EltekGD47AC_01
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47AC_01" ;
+		
+		bop:observes					vertigo:Room909AirQuality ;
+		bop:isHostedBy					vertigo:Room909_Drawer_01 .
+		
+### 916
+
+vertigo:EltekRHT10-D_03
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekRHT10-D_03" ;
+		
+		bop:observes					vertigo:Room916Temperature, vertigo:Room916RelativeHumidity ;
+		bop:isHostedBy					vertigo:Room916_Drawer_01 .
+		
+vertigo:EltekGD47_03
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47_03" ;
+		
+		bop:observes					vertigo:Room916CO2 ;
+		bop:isHostedBy					vertigo:Room916_Drawer_01 .
+		
+vertigo:EltekLS50_03
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekLS50_03" ;
+		
+		bop:observes					vertigo:Room916Illuminance ;
+		bop:isHostedBy					vertigo:Room916_Drawer_01 .
+		
+vertigo:EltekGD47AC_03
+		a								bop:Sensor, bot:Element, mep:Sensor ;
+		
+		bpt:hasName						"EltekGD47AC_03" ;
+		
+		bop:observes					vertigo:Room916AirQuality ;
+		bop:isHostedBy					vertigo:Room916_Drawer_01 .
+		
+		
+
+##############################################################################################################
+### Properties
+##############################################################################################################
+
+### 907
+
+vertigo:Room907Temperature
+		a							bop:Property , bpt:Temperature , quantitykind:Temperature ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c ;
+		bop:hasPropertyState		vertigo:Room907TemperatureDataPoint .
+		
+vertigo:Room907RelativeHumidity
+		a							bop:Property , bpt:RelativeHumidity , quantitykind:RelativeHumidity ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c ;
+		bop:hasPropertyState		vertigo:Room907RelativeHumidityDataPoint .
+
+vertigo:Room907AirQuality
+		a							bop:Property , bpt:AirQuality ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c ;
+		bop:hasPropertyState		vertigo:Room907AirQualityDataPoint .
+
+vertigo:Room907CO2
+		a							bop:Property , bpt:CO2 ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c ;
+		bop:hasPropertyState		vertigo:Room907CO2DataPoint .
+		
+vertigo:Room907Illuminance
+		a							bop:Property , bpt:Illuminance ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd429c ;
+		bop:hasPropertyState		vertigo:Room907IlluminanceDataPoint .
+
+### 909
+
+vertigo:Room909Temperature
+		a							bop:Property , bpt:Temperature , quantitykind:Temperature ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3 ;
+		bop:hasPropertyState		vertigo:Room909TemperatureDataPoint .
+		
+vertigo:Room909RelativeHumidity
+		a							bop:Property , bpt:RelativeHumidity , quantitykind:RelativeHumidity ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3 ;
+		bop:hasPropertyState		vertigo:Room909RelativeHumidityDataPoint .
+
+vertigo:Room909AirQuality
+		a							bop:Property , bpt:AirQuality ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3 ;
+		bop:hasPropertyState		vertigo:Room909AirQualityDataPoint .
+
+vertigo:Room909CO2
+		a							bop:Property , bpt:CO2 ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3 ;
+		bop:hasPropertyState		vertigo:Room909CO2DataPoint .
+		
+vertigo:Room909Illuminance
+		a							bop:Property , bpt:Illuminance ;
+		bop:isPropertyOf			vertigo:space_df89b211-cfcc-427c-84c5-ccb200fd42e3 ;
+		bop:hasPropertyState		vertigo:Room909IlluminanceDataPoint .
+
+### 916
+
+vertigo:Room916Temperature
+		a							bop:Property , bpt:Temperature , quantitykind:Temperature ;
+		bop:isPropertyOf			vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93 ;
+		bop:hasPropertyState		vertigo:Room916TemperatureDataPoint .
+		
+vertigo:Room916RelativeHumidity
+		a							bop:Property , bpt:RelativeHumidity , quantitykind:RelativeHumidity ;
+		bop:isPropertyOf			vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93 ;
+		bop:hasPropertyState		vertigo:Room916RelativeHumidityDataPoint .
+
+vertigo:Room916AirQuality
+		a							bop:Property , bpt:AirQuality ;
+		bop:isPropertyOf			vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93 ;
+		bop:hasPropertyState		vertigo:Room916AirQualityDataPoint .
+
+vertigo:Room916CO2
+		a							bop:Property , bpt:CO2 ;
+		bop:isPropertyOf			vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93 ;
+		bop:hasPropertyState		vertigo:Room916CO2DataPoint .
+		
+vertigo:Room916Illuminance
+		a							bop:Property , bpt:Illuminance ;
+		bop:isPropertyOf			vertigo:space_c957547f-4e7b-4d9d-82d4-536e5f277e93 ;
+		bop:hasPropertyState		vertigo:Room916IlluminanceDataPoint .
+
+	
+	
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+# DATABASE
+################################################################################################################################################################################################################################
+################################################################################################################################################################################################################################
+
+vertigo:Vertigo
+		a							bop:Database ;
+		bop:hasDataPoint			vertigo:Room909TemperatureDataPoint , vertigo:Room909RelativeHumidityDataPoint , vertigo:Room909AirQualityDataPoint , vertigo:Room909CO2DataPoint , vertigo:Room909IlluminanceDataPoint , vertigo:Room907TemperatureDataPoint , vertigo:Room907RelativeHumidityDataPoint , vertigo:Room907AirQualityDataPoint , vertigo:Room907CO2DataPoint , vertigo:Room907IlluminanceDataPoint , vertigo:Room916TemperatureDataPoint , vertigo:Room916RelativeHumidityDataPoint , vertigo:Room916AirQualityDataPoint , vertigo:Room916CO2DataPoint , vertigo:Room916IlluminanceDataPoint .
+
+### 907
+
+vertigo:Room907TemperatureDataPoint 
+		bop:hasUnit					unit:DEG_C .
+
+vertigo:Room907RelativeHumidityDataPoint 
+		bop:hasUnit					unit:PERCENT .
+		
+vertigo:Room907AirQualityDataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room907CO2DataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room907IlluminanceDataPoint 
+		bop:hasUnit					unit:LUX .
+
+### 909
+
+vertigo:Room909TemperatureDataPoint 
+		bop:hasUnit					unit:DEG_C .
+
+vertigo:Room909RelativeHumidityDataPoint 
+		bop:hasUnit					unit:PERCENT .
+		
+vertigo:Room909AirQualityDataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room909CO2DataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room909IlluminanceDataPoint 
+		bop:hasUnit					unit:LUX .
+
+### 916
+
+vertigo:Room916TemperatureDataPoint 
+		bop:hasUnit					unit:DEG_C .
+
+vertigo:Room916RelativeHumidityDataPoint 
+		bop:hasUnit					unit:PERCENT .
+		
+vertigo:Room916AirQualityDataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room916CO2DataPoint 
+		bop:hasUnit					unit:V .
+		
+vertigo:Room916IlluminanceDataPoint 
+		bop:hasUnit					unit:LUX .
